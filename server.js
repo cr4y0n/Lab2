@@ -12,11 +12,11 @@ var addAmount = 0;
 
 app.get('/api/counter/add', (req, res) => {
   addAmount++;
-  res.send({ messase: 'added: 1'});
+  res.send({ message: 'added 1 to counter' });
 });
 
 app.get('/api/counter/get', (req, res) => {
-  res.send({ messase: 'current amount: ' + addAmount});
+  res.send({ 'currentAmount': addAmount });
 });
 
 //VG
@@ -41,7 +41,7 @@ app.post('/api/note', (req, res) => {
     if(err) { 
       throw err;
     }
-    res.send({message: 'sticky note created'});
+    res.send({ message: 'sticky note created' });
   });
 });
 
@@ -50,7 +50,7 @@ app.get('/api/note', (req, res) => {
     if(err) {
       throw err;
     }
-    res.send({message: 'sticky note read'});
+    res.send({ message: 'sticky note read' });
   });
 });
 
@@ -61,7 +61,7 @@ app.put('/api/note', (req, res) => {
     if(err) {
       throw err;
     }
-    res.send({message: 'sticky note updated'});
+    res.send({ message: 'sticky note updated' });
   });
 });
 
@@ -70,7 +70,7 @@ app.delete('/api/note', (req, res) => {
     if(err) {
       throw err;
     }
-    res.send({message: 'sticky note deleted'});
+    res.send({ message: 'sticky note deleted' });
   });
 });
 
