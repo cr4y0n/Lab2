@@ -1,3 +1,3 @@
 # node-express-2
 
-Using mySQL
+Using mySQL and MariaDB
